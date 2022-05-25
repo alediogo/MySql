@@ -1,0 +1,53 @@
+CONFIGURAR E CRIAR BANCO DE DADOS
+
+create database teste
+default character set utf8     
+default collate utf8_general_ci;    
+
+CRIAR TABELAS
+
+create table Conteiner (
+Id INT not null auto_increment,
+Cliente varchar (20) not null,
+Numero_Conteiner varchar(11) not null,
+Tipo char(2),
+condição enum('cheio', 'vazio'),
+Categoria enum('importação','exportação'),
+primary key (ID)
+);
+
+create table Movimentações (
+Tipo_Movimentaçao enum ('embarque', 'descarga', 'gate in', 'gate
+out', 'reposicionamento', 'pesagem', 'scanner')
+Data_Inicial date,
+Data_Final date,
+Hora_Inicial time,
+Hora_Final time
+);
+
+INSERIR DADOS
+
+insert into conteiner values
+('1', 'Alexandre', 'TEST1234567', '20', 'cheio', 'importação');
+
+insert into movimentações values
+('embarque', '2022-10-10', '2022-11-09', '13:05:02', '13:08:02');
+
+SELECIONAR/VISUALIZAR DADOS
+
+select * from  conteiner;
+select * from movimentações;
+
+ATUALIZAR DADOS
+
+UPDATE Conteiner
+SET NumConteiner = 'TEST7839323'
+WHERE id = '1'
+
+EXCLUIR DADOS
+
+delete from Conteiner
+where id = '1'
+
+
+
