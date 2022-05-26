@@ -44,10 +44,49 @@ UPDATE Conteiner
 SET NumConteiner = 'TEST7839323'
 WHERE id = '1'
 
-EXCLUIR DADOS
+ADCIONAR TABELAS
+
+alter table
+add column
+
+ADICIONAR COLUNA ESCOLHERNDO A POSIÇÃO DELA
+
+alter table varchar (10) AFTER cliente
+add column
+
+ADICIONAR COLUNA NA PRIMEIRA OPÇÃO
+
+alter table
+add column numero int FIRST
+
+MODIFICAR A ESTRUTURA DE DEFINIÇÃO DA TABELA
+
+alter table
+modify column pessoas VARCHAR(11)
+
+ALTERAR NOME DA COLUNA
+
+alter table 
+chance column pessoas HUMANOS varchar(11)
+
+ALTERAR NOME DA TABELA 
+
+alter table 
+rename to Baldes
+
+EXCLUIR TABELA
+
+alter table
+drop column
+
+EXCLUIR DADOS 
 
 delete from Conteiner
 where id = '1'
+
+EXCLUIR TABELA
+
+drop table conteiner
 
 
 
