@@ -87,5 +87,9 @@ EXCLUIR TABELA
 
 drop table conteiner
 
+EXCLUIR REGISTROS DE UM TABELA
+
+truncate table pessoas
+
 
 
