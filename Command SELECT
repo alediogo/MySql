@@ -1,0 +1,29 @@
+SELECIONANDO COLUNAS ORDENANDO POR PARAMETROS
+
+select * from cursos
+order by Nome;
+
+SELECIONANDO COLUNAS ORDENANDO POR PARAMETROS POR ORDEM DECRESCENTE OU CRESCENTE
+
+select * from cursos
+order by Nome DESC;
+
+select * from cursos
+order by Nome ASC;
+
+SELECIONADO COLUNAS SEM SELECIONAR TODA A BASE DE DADOS
+
+select nome, carga, ano from cursos
+order by nome, carga;
+
+SELECIONANDO COLUNAS FILTRANDO LINHAS
+
+select * from cursos
+where ano = '2016'
+order by nome;
+
+SELECIONANDO COLUNAS COM OPERADORES LÓGICOS
+
+select nome, carga, ano from cursos
+where ano <= 2015
+order by nome, carga;
