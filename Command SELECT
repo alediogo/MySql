@@ -47,6 +47,20 @@ order by ano;
 select * from cursos
 where carga > 35 AND totaulas < 30;
 
+SELECIOANDO DADOS COM CORINGA
+
+select * from cursos
+where nome LIKE '%A'
+
+select * from cursos
+where nome LIKE 'A%'
+
+select * from cursos
+where nome NOT LIKE 'A%'
+
+select * from cursos
+where nome LIKE 'PH%P'
+
 
 
 
