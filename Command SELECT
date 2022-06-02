@@ -47,7 +47,7 @@ order by ano;
 select * from cursos
 where carga > 35 AND totaulas < 30;
 
-SELECIOANDO DADOS COM CORINGA
+SELECIOANDO DADOS COM CORINGA e parametro LIKE
 
 select * from cursos
 where nome LIKE '%A'
@@ -61,6 +61,30 @@ where nome NOT LIKE 'A%'
 select * from cursos
 where nome LIKE 'PH%P'
 
+select * from cursos
+where nome LIKE 'PH%P%'
+
+select * from cursos
+where nome LIKE 'PH%P%_';
+
+SELECIONANDO COM DISITNÇÃO USANDO O COMANDO DISTINCT 
+
+select DISTINCT nacionalidade from
+order by nacionalidade;
+
+SELECIONANDO COM FUNÇÕES DE AGREGAÇÃO
+
+select COUNT (*) from cursos where carga > 40;
+
+select COUNT (nome) from cursos;
+
+select MAX(carga) from cursos;
+
+select MIN(carga) from cursos;
+
+select SUM(totaulas) from cursos;
+
+select AVG(totaulas) from cursos;
 
 
 
