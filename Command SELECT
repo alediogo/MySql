@@ -27,3 +27,20 @@ SELECIONANDO COLUNAS COM OPERADORES LÓGICOS
 select nome, carga, ano from cursos
 where ano <= 2015
 order by nome, carga;
+
+select nome, carga, ano from cursos
+where ano != 2015
+order by nome, carga;
+
+select nome, carga, ano from cursos
+where ano !<> 2015
+order by nome, carga;
+
+select nome, carga, ano from cursos
+where totaulas BETWEEN '20' E '30'
+order by nome;
+
+select nome, descrição, ano from cursos
+where ano IN (2014, 2016)
+order by ano;
+
