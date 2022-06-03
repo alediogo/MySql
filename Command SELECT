@@ -37,7 +37,7 @@ where ano !<> 2015
 order by nome, carga;
 
 select nome, carga, ano from cursos
-where totaulas BETWEEN '20' E '30'
+where totaulas BETWEEN '20' AND '30'
 order by nome;
 
 select nome, descrição, ano from cursos
@@ -47,7 +47,7 @@ order by ano;
 select * from cursos
 where carga > 35 AND totaulas < 30;
 
-SELECIOANDO DADOS COM CORINGA e parametro LIKE
+SELECIOANDO DADOS COM CORINGA e operador LIKE(significa parecido)
 
 select * from cursos
 where nome LIKE '%A'
