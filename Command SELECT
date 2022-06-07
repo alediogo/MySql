@@ -86,6 +86,22 @@ select SUM(totaulas) from cursos;
 
 select AVG(totaulas) from cursos;
 
+SELECIONANDO DADOS COM AGRUPAMENTO
+
+select carga, COUNT(nome) cursos
+GROUP BY carga;
+
+select carga, COUNT(nome) from cursos where totaulas = 30
+gruoup by carga;
+
+AGRUPANDO COM HAVING
+
+select ano, count(*) from cursos
+group by ano
+HAVING ano > 2013
+order by count(*) desc;
+
+
 
 
 
