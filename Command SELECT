@@ -94,6 +94,14 @@ GROUP BY carga;
 select carga, COUNT(nome) from cursos where totaulas = 30
 gruoup by carga;
 
+select profissao, count(*) from gafanhotos
+group by profissao desc;
+
+select sexo,count(*) from gafanhotos
+where nascimento > '2005-01-01'
+group by sexo;
+
+
 AGRUPANDO COM HAVING
 
 select ano, count(*) from cursos
@@ -101,7 +109,15 @@ group by ano
 HAVING ano > 2013
 order by count(*) desc;
 
+select nacionalidade,count(*)from gafanhotos 
+where nacionalidade <> 'brasil'
+group by nacionalidade
+having count(nacionalidade ) >'3';
 
+select altura,count(*) from gafanhotos
+where peso > '100'
+group by altura
+having altura > (select avg(altura)from gafanhotos);
 
 
 
