@@ -1,0 +1,34 @@
+INSERINDO CHAVE ESTRANGEIRA
+
+alter table gafanhotos
+add column cursopreferido int;
+
+alter table gafanhotos
+ADD FOREING KEY (cursopreferido) 
+references cursos (idcurso);
+
+update gafanhotos
+set cursopreferido = '6'
+where id = '1'
+
+CRIANDO UM INNER JOIN (PARA MOSTRAR OS DADOS QUE ESTÃO NAS TABELAS RELACIONADAS NA CHAVE ESTRANGREIRA)
+
+select gafanhotos.nome, gafanhotos.cursopreferido, cursos.nome, cursos.ano
+from gafanhotos INNER JOIN cursos
+ON cursos.idcurso = gafanhotos.cursopreferido
+
+APELIDANDO COM AS PRA FACILITAR A LEITURA E TAMANHO DO CÓDIGO
+
+select g.nome, c.nome, c.ano
+from gafanhotos AS g JOIN cursos as c
+ON c.idcurso = g.cursopreferido
+
+CRIANDO UM OUTER JOIN (PARA MOSTRAR OS DADOS QUE TAMBÉM NÃO ESTÃO RELACIONADAS NA CHAVE ESTRANGREIRA)
+
+select g.nome, c.nome, c.ano
+from gafanhotos AS g RIGHT OUTER JOIN cursos as c
+ON c.idcurso = g.cursopreferido
+
+select g.nome, c.nome, c.ano
+from gafanhotos AS g LEFT OUTER JOIN cursos as c
+ON c.idcurso = g.cursopreferido
