@@ -32,3 +32,30 @@ ON c.idcurso = g.cursopreferido
 select g.nome, c.nome, c.ano
 from gafanhotos AS g LEFT OUTER JOIN cursos as c
 ON c.idcurso = g.cursopreferido
+
+
+CRIANDO UMA CHAVE ESTRANGEIRA PRA RELACIONAR COM DUAS TABELAS
+
+CREATE TABLE gafanhoto_assiste_curso (
+
+id int NOT NULL AUTO_INCREMENT,
+data date,
+idgafanhoto int,
+idcurso int,
+PRIMARY KEY (id),
+FOREIGN KEY (idgafanhoto) REFERENCES gafanhotos (id),
+
+) DEFAULT CHARSET = utf8;
+
+select g.nome, c.idcurso from gafanhotos g
+JOIN gafanhoto_assiste_curso a
+ON g.id = a.idgafanhoto
+JOIN cursos c
+ON c.idcurso = a.idcurso
+order by g.nome;
+
+
+
+
+
+
